@@ -1,0 +1,32 @@
+<template>
+    <div style="width: 600px">
+      
+    <lightning-card title="Connect with Salesforce">
+    
+        <lightning-record-form 
+         object-api-name={objectApiName} 
+         fields = {fieldList} 
+         onsuccess = {successHandler}
+         record-id={recordId}  
+        >    
+        </lightning-record-form>  
+
+
+
+        <!--  
+    <lightning-record-form 
+    object-api-name={objectName}  
+     fields = {fieldList} 
+     onsuccess = {successHandler}
+     record-id="0015j00000k04nRAAQ"   
+     mode = "readonly"
+     layout-type="Full"
+     columns="4"
+     >
+
+    </lightning-record-form>  -->
+
+</lightning-card>
+<!-- "Name" -->
+</div>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title = "demo Fetch API">
+        <div class="wrapper">
+            <lightning-button label="Fetch Data" variant="brand"  onclick={handleClick} ></lightning-button>
+
+        <template for:each={posts} for:item="post">
+               <div key = {post.id}>
+                {post.body}
+
+            </div>
+
+        </template>    
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title = 'Data Binding'>
+        Welcome Dear {firstname}
+   <div class ="slds-var-m-around_medium">  
+     "division 1"
+     {person.name}
+     {person.age} <br/>
+     {person.address.city}  <br/>
+     {person.address.zip}  <br/>
+     {person.address.district}<br/>
+        {fruit}
+  </div>
+  <lightning-input name = "inputbox" label="Enter customer name"  onchange={handleChange} value ={firstname} ></lightning-input>
+  
+  first name : {firstname}
+
+</lightning-card>
+
+
+</template>

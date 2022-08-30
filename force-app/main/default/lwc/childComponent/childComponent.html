@@ -1,0 +1,18 @@
+<template>
+    <div>
+      <!--  message from parent : {message} 
+        <br/>
+        {emp.code}   <br/>
+        {emp.name} -->
+
+ <template for:each={emp} for:item="employee" >
+        <div key = {employee.code}>
+            {employee.code}
+
+            {employee.name}
+
+        </div>
+        </template>     
+
+    </div>
+</template>

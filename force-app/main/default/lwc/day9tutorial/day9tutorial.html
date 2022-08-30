@@ -1,0 +1,48 @@
+<template>
+  <lightning-card> 
+   
+<template for:each={fruits} for:item ="fruit">
+
+        <div key ={fruit} class = slds-border_top> 
+            
+            {fruit} 
+        </div> 
+
+  </template>
+
+  <template for:each={Employee} for:item ="emp">
+
+    <div key ={emp.name} class = slds-border_top> 
+        
+        {emp.name} 
+        {emp.position} 
+    </div> 
+
+</template>
+
+
+   <!-- <template if:true ={isShow}>
+        temple visible if isShow is true
+    </template>
+    <template if:false ={isShow}>
+        temple visible if isShow is false
+    </template> 
+-->
+     
+   
+
+   <lightning-button name = "btn1" onclick={handleClick} label ='Button1' > </lightning-button> 
+   <lightning-button name = "btn2" onclick={handleClick} label ='Button2'  > </lightning-button> 
+   <br/> 
+
+ <!--   {firstname} <br/>
+    {Employee.position} <br/>
+    {personName}  {personsalary}
+
+ -->
+
+
+
+  </lightning-card>
+       
+</template>

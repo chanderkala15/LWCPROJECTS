@@ -1,0 +1,94 @@
+<template>
+    <html>
+    <lightning-card  title="To do Items">
+        
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+       <!--     <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+                Button-icons with the <code> variant</code>
+                 attribute omitted or set to the default value of <code>border</code>.
+            </h2> -->
+         
+        </div> 
+          
+        <p class="slds-p-horizontal_small"> 
+            
+            <template for:each={mytodolist} for:item ="list">
+               <div key ={list}>  
+                
+                <table  width =50>
+                    <tbody>
+                    <tr>
+                         <td width = 70%>  {list}</td>
+                         <td width = 30%>  <lightning-button-icon name ={list}  onclick = {handleDelete} icon-name="utility:delete"    alternative-text="Delete"   class="slds-m-left_xx-small" title="Delete"></lightning-button-icon> </td>
+
+                       </tr>
+                    
+                    </tbody>
+                    </table>
+
+                   
+            </div>
+              
+                    
+            </template>
+       </p>         
+            <div slot="footer"> 
+               
+                   <lightning-input  onclick={handleChange} onchange={handleChange} placeholder="Enter Task here..."> </lightning-input> 
+                  
+                   <lightning-button label="Add" onclick={handleClick} slot="actions"></lightning-button> 
+                   
+                   
+               
+            </div>
+        
+            
+        </lightning-card>
+</template>
+</html>
+ 
+
+
+<!--  <div class="mycustomdiv">
+      <lightning-card >
+              <div slot="footer" > 
+                        <div class ="slds-grid slds-gutters"> 
+                               <div class = "slds-col slds-small-size_1-of-1  slds-medium-size_6-of-12">
+                                       <lightning-input  value = "Enter Task" type="text" name="input1" onchange={handleChange} ></lightning-input>
+    
+                              </div>
+                                                 <div class = "slds-col slds-small-size_1-of-1 slds-medium-size_6-of-12" >
+    
+                                                   <lightning-button label="Add" title="action" onclick={handleClick}> </lightning-button>
+      
+                                                </div>
+    
+                  </div>
+                     
+               </div>
+
+              
+               
+               
+
+              <template for:each={mytodolist} for:item ="list">
+                          <div key ={list}  >  
+                    
+                               <div   class  = "mydiv"> 
+                                <div class = "slds-medium-size_6-of-12">   
+                                     {list}  
+
+                                 </div> 
+                                 <div class = "slds-medium-size_6-of-12"> 
+                                    <img src="https://picsum.photos/id/237/200/300" style="width: 5%" > 
+                                </div> 
+                                    
+                              </div>
+
+    
+                          </div>
+
+               </template>
+      </lightning-card>
+</div>  
+</template> -->

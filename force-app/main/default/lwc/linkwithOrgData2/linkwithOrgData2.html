@@ -1,0 +1,43 @@
+<template>
+    <div style="width: 500px">
+      
+        <lightning-card title="Connect with Salesforce Org #2">
+        
+            <lightning-record-view-form
+             object-api-name="Account"
+             record-id= "0015j00000Vw8KhAAJ"
+            >  
+                  <div class = "slds-grid slds-gutters"> 
+                    <div class = "slds-col slds-size_6-of-12">
+                        <lightning-output-field field-name= "Name"> </lightning-output-field>
+                        <lightning-output-field field-name= "Industry"> </lightning-output-field>
+                        <lightning-output-field field-name= "Phone"> </lightning-output-field>
+                    </div> 
+                    <div class = "slds-col slds-size_6-of-12">
+
+                     
+                       <lightning-output-field field-name= "AnnualRevenue"> </lightning-output-field>
+                       <lightning-output-field field-name= "BillingAddress"> </lightning-output-field>                      
+                    </div>
+                </div>
+            </lightning-record-view-form>  
+    
+    
+    
+            <!--  
+        <lightning-record-form 
+        object-api-name={objectName}  
+         fields = {fieldList} 
+         onsuccess = {successHandler}
+         record-id="0015j00000k04nRAAQ"   
+         mode = "readonly"
+         layout-type="Full"
+         columns="4"
+         >
+    
+        </lightning-record-form>  -->
+    
+    </lightning-card>
+    <!-- "Name" -->
+    </div>
+</template>

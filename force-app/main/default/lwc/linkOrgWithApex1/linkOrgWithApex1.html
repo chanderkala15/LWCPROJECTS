@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="LWC : Connect via APEX - linkOrgWithApex1">
+        <div class ="slds-var-m-around_medium">
+            <lightning-combobox
+            name="select"
+            label="Choose Rating"
+            value={value}
+            options={options}
+            onchange={handleChangeCombo} > </lightning-combobox>        
+
+
+        <template if:true={accountRecords}>
+          <template  for:each={accountRecords} for:item="acc">
+                <div  key={acc.Id}>
+                    
+             <p>     Name    :  {acc.Name} </p> 
+             <p>    Rating   :  {acc.Rating} </p> 
+             <p>   Industry  :  {acc.Industry} </p> 
+                ----------------------------------------------------------------    
+                </div>
+            </template>
+        </template>
+                <template  if:true={error}>
+            Error: {error}
+        </template> 
+        </div>
+
+
+    </lightning-card>
+</template>

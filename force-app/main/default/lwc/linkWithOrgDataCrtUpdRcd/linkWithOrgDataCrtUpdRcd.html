@@ -1,0 +1,33 @@
+<template>
+    
+<lightning-card title = "Update Account Record - linkWithOrgDataCrtUpdRcd"> 
+  <lightning-combobox
+    name="select"
+    label="Choose"
+    value={value}
+    options={options}
+    onchange={handleChangeCombo} > </lightning-combobox> 
+
+    <div class="slds-var-m-around_medium">     
+    
+     <template if:true={SelectedOpt}>
+        <b>
+    <lightning-input name ="Id" type = "id" variant ="standard"  label = "Record Id to Update" value={Id} onchange = {handleChange}> </lightning-input> </b>
+     </template>
+    
+     <lightning-input name ="Name" type ="text" variant ="standard" label = "Account Name" value={Name} onchange = {handleChange}>  </lightning-input>
+    <lightning-input name = "Industry" type ="text" variant ="standard" label = "Industry" value={Industry} onchange = {handleChange}>  </lightning-input>
+    <lightning-input name = "AnnualRevenue" type ="text" variant ="standard" label="Revenue" value = {AnnualRevenue} onchange = {handleChange}> </lightning-input>
+    </div>
+  <!--  <lightning-button label="Create" onclick={handleClick}> </lightning-button> -->
+  <template if:true={SelectedOpt}>  
+  <lightning-button name = "Update" label="Update" onclick={handleClick}> </lightning-button>
+  </template>
+  <template if:false={SelectedOpt}>  
+    <lightning-button name = "Create" label="Create" onclick={handleClick}> </lightning-button>
+    </template>
+      <template if:true={SelectedOpt}>  
+      <lightning-button name = "Retrieve" label="Retrieve" onclick={handleClick}> </lightning-button>
+      </template>
+</lightning-card>
+</template>

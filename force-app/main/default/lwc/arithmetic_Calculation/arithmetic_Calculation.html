@@ -1,0 +1,21 @@
+<template>
+   
+        <lightning-card title = 'Calculator'>
+            
+       <div class ="slds-var-m-around_medium">  </div>
+        <lightning-input type="number" value = {input1} name="input1" label="Enter first number" onchange={handleChange} ></lightning-input>
+        <lightning-input type="number" value = {input2} name="input2" label="Enter second number" onchange={handleChange} ></lightning-input>
+        <lightning-button name = "addbutton" label = "Add"  onclick = {handleClick} > </lightning-button>
+        <lightning-button name = "subbutton" label = "Sub"  onclick = {handleClick} > </lightning-button>
+        <lightning-button name = "multbutton" label = "Mult" onclick = {handleClick} > </lightning-button>
+        <lightning-button name = "divbutton" label = "Div" onclick = {handleClick} > </lightning-button>
+        <lightning-button name = "clearbutton" label = "clear" onclick = {handleClick} > </lightning-button>
+        <br/>
+        error : {error}  <br/>
+        output : {output}  
+
+       
+    </lightning-card>
+    
+
+</template>

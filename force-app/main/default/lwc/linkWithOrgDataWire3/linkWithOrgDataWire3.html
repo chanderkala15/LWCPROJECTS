@@ -1,0 +1,50 @@
+<template>
+    <lightning-card title="GetObjectInfo via WIRE" icon-name="custom:custom67">
+    
+        <template if:true= {objectInfo.data}>
+    <p> Object          : <b>{objectApiName} </b></p>
+    <p> Total fields    : <b>{totalField} </b> </p>
+    <br/>
+
+    <p>Total Number of Text Fields:-
+        <lightning-formatted-number value={totalTextFields}></lightning-formatted-number>
+    </p>
+    <p>Total Number of Numeric Fields:-
+        <lightning-formatted-number value={totalIntegerFields}></lightning-formatted-number>
+    </p>
+
+    <p>Total Number of Currency Fields:-
+        <lightning-formatted-number value={totalCurrencyFields}></lightning-formatted-number>
+    </p>
+    <p>Total Number of Picklist Fields:-
+        <lightning-formatted-number value={totalPicklistFields}></lightning-formatted-number>
+    </p>
+    
+    <p>Total Number of Phone Fields:-
+        <lightning-formatted-number value={totalPhoneFields}></lightning-formatted-number>
+    </p>
+    
+    <p>Total Number of lookup Fields:-
+        <lightning-formatted-number value={totallookupFields}></lightning-formatted-number>
+    </p>
+    
+    Field List :
+     <lightning-combobox name="fieldApiName" label="Select Field To Get Informtion" value=""
+    placeholder="Select Field Api Name" options={fieldOptions} onchange={handleChange} required> </lightning-combobox> 
+
+
+    
+    
+        <lightning-button label="Click for Detail" onclick={handleClick1}> </lightning-button>
+    <b>
+        <p>  field Data Type: {fieldDatatype}    </p>
+
+        <p> field type(custome/Standard)  : {fieldType} </p>
+ 
+ 
+    </b>
+ 
+    
+    </template>
+</lightning-card>
+</template>

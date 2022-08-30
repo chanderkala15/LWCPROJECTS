@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title = "Manage Accounts: (advisoryAssist)" variant="narrow" icon-name="standard:account">
+
+
+<br/>
+<lightning-combobox
+name="zipCode"
+label="Select Zip Code"
+value= {}
+placeholder="Select Zip Code"
+options={fieldOptions}
+onchange={handleChange} ></lightning-combobox>
+<br/>
+
+<lightning-datatable
+        key-field="id"
+        data={displayData}
+        columns={columns}
+        onrowaction={handleRowAction}>
+</lightning-datatable>
+
+
+
+<lightning-button label =getvalue onclick={handleClick}></lightning-button>
+</lightning-card>
+</template>

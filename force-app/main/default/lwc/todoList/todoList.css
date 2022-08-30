@@ -1,0 +1,33 @@
+:host {
+    min-width:430px;
+    max-width:620px;
+}
+table, tr th,td, caption {
+    border: 2px solid black;
+    border-collapse: collapse;
+    font-size: 20px;
+   
+
+}
+/*
+.mycustomdiv
+{
+    display: block;
+    background: gray;
+    padding: 20px;
+    color:black;
+    border: 5px solid green ;
+}
+.mydiv
+{
+
+    padding: 5px;   
+    color:black;
+    margin: 5px;
+    width: 900px;
+    height:35px;
+    border: 3px solid green;
+    display: inline-block;
+    text-align: center;
+   
+} */
